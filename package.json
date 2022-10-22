@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r sucrase/register src/index.js",
+    "dev": "nodemon -r dotenv/config -r sucrase/register src/index.js",
     "server": "json-server --watch db.json"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
   "dependencies": {
     "apollo-server": "^3.10.3",
     "dataloader": "^2.1.0",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0"
   }
 }

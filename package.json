@@ -20,6 +20,7 @@
     "sucrase": "^3.28.0"
   },
   "dependencies": {
+    "apollo-datasource-rest": "^3.7.0",
     "apollo-server": "^3.10.3",
     "dataloader": "^2.1.0",
     "dotenv": "^16.0.3",

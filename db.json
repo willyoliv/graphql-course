@@ -159,6 +159,24 @@
       "userName": "marcia_carvalho81",
       "indexRef": 1,
       "createdAt": "2016-12-08T00:49:39.870Z"
+    },
+    {
+      "firstName": "Willy",
+      "lastName": "Miranda",
+      "userName": "willy.miranda",
+      "passwordHash": "$2b$12$a8zXbCS7b1ybYXuODpjYre2lZBMPN414EH33nrZSd7df3VlpJdq/W",
+      "indexRef": 21,
+      "createdAt": "2022-10-24T23:34:51.223Z",
+      "id": "NxI-pPg"
+    },
+    {
+      "firstName": "Willy",
+      "lastName": "Oliveira",
+      "userName": "willy.oliveira",
+      "passwordHash": "$2b$12$E6scCeeJSZD8UPYui8ZBreiGCS.89pbECpJOGzmdoVqLlfVri.le2",
+      "indexRef": 22,
+      "createdAt": "2022-10-24T23:38:03.158Z",
+      "id": "gf-ULmS"
     }
   ],
   "posts": [

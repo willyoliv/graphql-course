@@ -177,7 +177,7 @@
       "indexRef": 22,
       "createdAt": "2022-10-24T23:38:03.158Z",
       "id": "gf-ULmS",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJnZi1VTG1TIiwiaWF0IjoxNjY2NzM4NzU2LCJleHAiOjE2NjczNDM1NTZ9.DjTk-rq55JqZFMRrdenkq3pweNkCBB-2pCzaKTYvEAc"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJnZi1VTG1TIiwiaWF0IjoxNjY2NzM5OTM1LCJleHAiOjE2NjczNDQ3MzV9.vFE4MnO9kaRt3bu-02BThjpdvFU6Fu0GrE4YBVeCNuM"
     }
   ],
   "posts": [
@@ -372,6 +372,14 @@
       "userId": "502",
       "indexRef": 19,
       "createdAt": "2017-04-26T19:39:05.420Z"
+    },
+    {
+      "title": "Meu post logado!!!",
+      "body": "Agora temos sistema de login",
+      "userId": "gf-ULmS",
+      "indexRef": 25,
+      "createdAt": "2022-10-25T23:19:05.610Z",
+      "id": "VI-l1Io"
     }
   ],
   "comments": [

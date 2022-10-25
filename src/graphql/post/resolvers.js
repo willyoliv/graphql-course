@@ -26,7 +26,8 @@ const updatePost = async (_, { postId, data }, { dataSources }) => {
   return dataSources.postApi.updatePost(postId, data);
 };
 
-const deletePost = async (_, { postId }, { dataSources }) => {
+const deletePost = async (_, { postId }, { dataSources, loggedUserId}) => {
+  checkisLoggedIn(loggedUserId)
   return dataSources.postApi.deletePost(postId);
 };
 

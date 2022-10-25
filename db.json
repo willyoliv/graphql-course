@@ -178,6 +178,16 @@
       "createdAt": "2022-10-24T23:38:03.158Z",
       "id": "gf-ULmS",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJnZi1VTG1TIiwiaWF0IjoxNjY2NzM5OTM1LCJleHAiOjE2NjczNDQ3MzV9.vFE4MnO9kaRt3bu-02BThjpdvFU6Fu0GrE4YBVeCNuM"
+    },
+    {
+      "firstName": "Joana",
+      "lastName": "O.",
+      "userName": "joana",
+      "passwordHash": "$2b$12$qQ24.us8zVEliFh350D3aeK09tkP4m0oLGTgwmaS07j1KL8x2vgAW",
+      "indexRef": 23,
+      "createdAt": "2022-10-25T23:51:05.867Z",
+      "id": "3QisWaU",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzUWlzV2FVIiwiaWF0IjoxNjY2NzQxODgyLCJleHAiOjE2NjczNDY2ODJ9.blVUOy4xm2pL3XDSqt8EOuVJ5yh0lfJfcvKfXx4yu_U"
     }
   ],
   "posts": [
@@ -380,6 +390,22 @@
       "indexRef": 25,
       "createdAt": "2022-10-25T23:19:05.610Z",
       "id": "VI-l1Io"
+    },
+    {
+      "title": "Meu post logado!!!",
+      "body": "Agora temos sistema de login",
+      "userId": "gf-ULmS",
+      "indexRef": 26,
+      "createdAt": "2022-10-25T23:48:13.175Z",
+      "id": "WZxwXjC"
+    },
+    {
+      "title": "Meu post logado!!!",
+      "body": "Agora temos sistema de login",
+      "userId": "gf-ULmS",
+      "indexRef": 27,
+      "createdAt": "2022-10-25T23:51:41.726Z",
+      "id": "UjXmfIh"
     }
   ],
   "comments": [

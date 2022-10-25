@@ -185,7 +185,8 @@
       "passwordHash": "$2b$12$8sKKIlPSOnPcg/rYxGkZbOwsWyvpWLO6EWqd4HV914QsleCB5T4rW",
       "indexRef": 23,
       "createdAt": "2022-10-25T00:53:36.714Z",
-      "id": "X2FCDwG"
+      "id": "X2FCDwG",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJYMkZDRHdHIiwiaWF0IjoxNjY2NjYxMzcxLCJleHAiOjE2NjcyNjYxNzF9.dMcazsWrS78j288aD8o2InhXH68m0Vl52x9fDOw7vNY"
     }
   ],
   "posts": [

@@ -176,17 +176,8 @@
       "passwordHash": "$2b$12$E6scCeeJSZD8UPYui8ZBreiGCS.89pbECpJOGzmdoVqLlfVri.le2",
       "indexRef": 22,
       "createdAt": "2022-10-24T23:38:03.158Z",
-      "id": "gf-ULmS"
-    },
-    {
-      "firstName": "Joana D.",
-      "lastName": "O.",
-      "userName": "joana",
-      "passwordHash": "$2b$12$8sKKIlPSOnPcg/rYxGkZbOwsWyvpWLO6EWqd4HV914QsleCB5T4rW",
-      "indexRef": 23,
-      "createdAt": "2022-10-25T00:53:36.714Z",
-      "id": "X2FCDwG",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJYMkZDRHdHIiwiaWF0IjoxNjY2NjYxMzcxLCJleHAiOjE2NjcyNjYxNzF9.dMcazsWrS78j288aD8o2InhXH68m0Vl52x9fDOw7vNY"
+      "id": "gf-ULmS",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJnZi1VTG1TIiwiaWF0IjoxNjY2NzM4NzU2LCJleHAiOjE2NjczNDM1NTZ9.DjTk-rq55JqZFMRrdenkq3pweNkCBB-2pCzaKTYvEAc"
     }
   ],
   "posts": [

@@ -1,10 +1,15 @@
+import { AuthenticationError } from "apollo-server";
+
 // Query resolvers
 const post = async (_, { id }, { dataSources }) => {
   const post = dataSources.postApi.getPost(id);
   return post;
 };
 
-const posts = async (_, { input }, { dataSources }) => {
+const posts = async (_, { input }, { dataSources, loggedUserId }) => {
+  if (!loggedUserId) {
+    throw new AuthenticationError('you have to log in')
+  }
   const posts = dataSources.postApi.getPosts(input);
   return posts;
 };

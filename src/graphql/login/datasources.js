@@ -39,10 +39,10 @@ export class LoginApi extends RESTDataSource {
 
     // Response Header
     this.context.res.cookie('jwtToken', token, {
-      secure: false, // Rede segura - Https
+      secure: true, // Rede segura - Https
       httpOnly: true, // Não deve ser acessado via código
       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
-      path:'/',
+      path: '/',
       sameSite: 'strict', // strict lax none
     });
 

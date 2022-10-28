@@ -54,8 +54,6 @@ const cookieParser = (cookiesHeader) => {
 export const context = async ({ req, res }) => {
   let loggedUserId = await authorizeUserWithBearerToken(req);
 
-  console.log(req.headers.cookie);
-
   if (!loggedUserId) {
     if (req.headers.cookie) {
       const { jwtToken } = cookieParser(req.headers.cookie);

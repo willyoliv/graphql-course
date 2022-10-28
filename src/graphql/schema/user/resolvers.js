@@ -2,7 +2,6 @@ import { checkOwner } from '../login/utils/login-functions';
 
 // Query resolvers
 const users = async (_, { input }, { dataSources }) => {
-  console.log('teste');
   const users = await dataSources.userApi.getUsers(input);
   return users;
 };
@@ -28,7 +27,6 @@ const updateUser = async (
 };
 
 const deleteUser = async (_, { userId }, { dataSources, loggedUserId }) => {
-  console.log('AQUI no resolver')
   checkOwner(userId, loggedUserId);
   return dataSources.userApi.deleteUser(userId);
 };

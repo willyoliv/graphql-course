@@ -68,7 +68,6 @@ const del = (endPoint, body, requestInit = {}) => {
   // GET -> Ler
   const userGetResponse = await get('users/502');
   const user = await userGetResponse.json();
-  console.log(user);
 
   // POST -> Criar
   // const userResponse = await post('users', {

@@ -2,9 +2,6 @@
 import { PubSub } from 'graphql-subscriptions';
 import { checkIsLoggedIn } from '../login/utils/login-functions';
 
-export const pubSub = new PubSub();
-export const CREATED_COMMENT_TRIGGER = 'CREATED_COMMENT';
-
 const createComment = async (_, { data }, { dataSources, loggedUserId }) => {
   checkIsLoggedIn(loggedUserId);
 
@@ -24,12 +21,7 @@ const user = async ({ user_id }, _, { dataSources }) => {
   return user;
 };
 
-const createdComment = {
-  subscribe: () => pubSub.asyncIterator(CREATED_COMMENT_TRIGGER),
-};
-
 export const commentResolvers = {
   Mutation: { createComment },
-  Subscription: { createdComment },
   Comment: { user },
 };

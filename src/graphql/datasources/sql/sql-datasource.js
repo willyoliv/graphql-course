@@ -5,7 +5,7 @@ import DataLoader from 'dataloader';
 export class SQLDatasource extends DataSource {
   constructor(dbConnection) {
     super();
-    this.bd = dbConnection;
+    this.db = dbConnection;
     this._loader = new DataLoader(async (ids) => this.batchLoaderCallback(ids));
   }
 

@@ -1,5 +1,5 @@
-import { AuthenticationError } from "apollo-server";
-import { checkIsLoggedIn } from "../login/utils/login-functions";
+import { AuthenticationError } from 'apollo-server';
+import { checkIsLoggedIn } from '../login/utils/login-functions';
 
 // Query resolvers
 const post = async (_, { id }, { dataSources }) => {
@@ -9,7 +9,7 @@ const post = async (_, { id }, { dataSources }) => {
 
 const posts = async (_, { input }, { dataSources, loggedUserId }) => {
   if (!loggedUserId) {
-    throw new AuthenticationError('You have to log in')
+    throw new AuthenticationError('You have to log in');
   }
   const posts = dataSources.postApi.getPosts(input);
   return posts;
@@ -26,8 +26,8 @@ const updatePost = async (_, { postId, data }, { dataSources }) => {
   return dataSources.postApi.updatePost(postId, data);
 };
 
-const deletePost = async (_, { postId }, { dataSources, loggedUserId}) => {
-  checkIsLoggedIn(loggedUserId)
+const deletePost = async (_, { postId }, { dataSources, loggedUserId }) => {
+  checkIsLoggedIn(loggedUserId);
   return dataSources.postApi.deletePost(postId);
 };
 
@@ -36,8 +36,12 @@ const user = async ({ userId }, _, { dataSources }) => {
   return dataSources.userApi.batchLoadById(userId);
 };
 
+const comments = async ({ id: post_id }, _, { dataSources }) => {
+  return dataSources.commentDb.getByPostId(post_id);
+};
+
 export const postResolvers = {
   Query: { post, posts },
   Mutation: { createPost, updatePost, deletePost },
-  Post: { user },
+  Post: { user, comments },
 };

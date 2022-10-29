@@ -4,6 +4,11 @@ export const commentTypedefs = gql`
   extend type Mutation {
     createComment(data: CreateCommentInput!): Comment!
   }
+
+  extend type Subscription {
+    createdComment: Comment!
+  }
+
   type Comment {
     id: ID!
     comment: String!

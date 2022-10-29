@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js -r dotenv/config -r sucrase/register src/index.js",
-    "server": "json-server --watch db.json --port 3004",
+    "server": "npx json-server --watch db.json --port 3004",
     "build": "rimraf ./dist && sucrase ./src -d ./dist --transforms imports",
     "start": "npm run server & node -r dotenv/config dist/index.js"
   },

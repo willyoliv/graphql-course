@@ -27,6 +27,13 @@ const server = new ApolloServer({
     origin: ['https://studio.apollographql.com'],
     credentials: true,
   },
+  subscriptions: {
+    onConnect: (connectionParams, ws, _context) => {
+      return {
+        req: ws.upgradeReq,
+      };
+    },
+  },
 });
 
 server.listen(4003).then(({ url }) => {

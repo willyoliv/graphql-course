@@ -159,45 +159,6 @@
       "userName": "marcia_carvalho81",
       "indexRef": 1,
       "createdAt": "2016-12-08T00:49:39.870Z"
-    },
-    {
-      "firstName": "Willy",
-      "lastName": "Miranda",
-      "userName": "willy.miranda",
-      "passwordHash": "$2b$12$a8zXbCS7b1ybYXuODpjYre2lZBMPN414EH33nrZSd7df3VlpJdq/W",
-      "indexRef": 21,
-      "createdAt": "2022-10-24T23:34:51.223Z",
-      "id": "NxI-pPg"
-    },
-    {
-      "firstName": "Willy",
-      "lastName": "Oliveira",
-      "userName": "willy.oliveira",
-      "passwordHash": "$2b$12$E6scCeeJSZD8UPYui8ZBreiGCS.89pbECpJOGzmdoVqLlfVri.le2",
-      "indexRef": 22,
-      "createdAt": "2022-10-24T23:38:03.158Z",
-      "id": "gf-ULmS",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJnZi1VTG1TIiwiaWF0IjoxNjY2NzQ3MjQ3LCJleHAiOjE2NjczNTIwNDd9.FXiaSss-DZuCNtgv1FzpKEabz8R8BPxLrp8mRXMYtHI"
-    },
-    {
-      "firstName": "Joana",
-      "lastName": "O.",
-      "userName": "joana",
-      "passwordHash": "$2b$12$qQ24.us8zVEliFh350D3aeK09tkP4m0oLGTgwmaS07j1KL8x2vgAW",
-      "indexRef": 23,
-      "createdAt": "2022-10-25T23:51:05.867Z",
-      "id": "3QisWaU",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzUWlzV2FVIiwiaWF0IjoxNjY3MDAzMDQ3LCJleHAiOjE2Njc2MDc4NDd9.TycpU3-JUWvoLlAHLlEBC_0INqYvCUKxOIRqrquCZwQ"
-    },
-    {
-      "firstName": "Willy Novo",
-      "lastName": "O.",
-      "userName": "willy.oliv",
-      "passwordHash": "$2b$12$BXA1gw/G0ay4eTrCO1Clw.WAH/XuTkW/cEEnY5soSCWmXoBBSxNUC",
-      "indexRef": 24,
-      "createdAt": "2022-10-29T00:27:32.330Z",
-      "id": "dhxDoo7",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkaHhEb283IiwiaWF0IjoxNjY3MDcwMTg5LCJleHAiOjE2Njc2NzQ5ODl9._KpCcu1Xbsc1jNZz2G1Ki9Kd-eCYNLVQ_hQsXGaAQ4o"
     }
   ],
   "posts": [

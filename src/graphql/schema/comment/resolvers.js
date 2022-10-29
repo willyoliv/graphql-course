@@ -1,5 +1,3 @@
-// import { PubSub } from 'apollo-server';
-import { PubSub } from 'graphql-subscriptions';
 import { checkIsLoggedIn } from '../login/utils/login-functions';
 
 const createComment = async (_, { data }, { dataSources, loggedUserId }) => {

@@ -8,7 +8,7 @@
     "dev": "nodemon -e js -r dotenv/config -r sucrase/register src/index.js",
     "server": "json-server --watch db.json",
     "build": "rimraf ./dist && sucrase ./src -d ./dist --transforms imports",
-    "start": "npm run server && node -r dotenv/config dist/index.js"
+    "start": "npm run server & node -r dotenv/config dist/index.js"
   },
   "keywords": [],
   "author": "",

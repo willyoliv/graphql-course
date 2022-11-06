@@ -1,4 +1,4 @@
-import { RESTDataSource } from 'apollo-datasource-rest';
+import { RESTDataSource } from '@apollo/datasource-rest';
 import { makeUserDataLoader } from './dataloaders';
 import {
   createUserFn,
@@ -14,9 +14,13 @@ export class UsersApi extends RESTDataSource {
   }
 
   async getUsers(urlParams = {}) {
-    return this.get('', urlParams, {
-      cacheOptions: { ttl: 0 },
-    });
+    return this.get(
+      '',
+      { params: { ...urlParams } },
+      {
+        cacheOptions: { ttl: 0 },
+      },
+    );
   }
 
   async getUser(id) {

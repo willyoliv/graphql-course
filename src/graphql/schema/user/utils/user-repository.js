@@ -5,9 +5,11 @@ export const createUserFn = async (userData, dataSource) => {
   await checkUserFields(userData, true);
 
   const indexRefUser = await dataSource.get('', {
-    _limit: 1,
-    _sort: 'indexRef',
-    _order: 'desc',
+    params: {
+      _limit: 1,
+      _sort: 'indexRef',
+      _order: 'desc',
+    },
   });
   const indexRef = indexRefUser[0].indexRef + 1;
 
@@ -20,9 +22,11 @@ export const createUserFn = async (userData, dataSource) => {
   }
 
   return dataSource.post('', {
-    ...userData,
-    indexRef,
-    createdAt: new Date().toISOString(),
+    body: {
+      ...userData,
+      indexRef,
+      createdAt: new Date().toISOString(),
+    },
   });
 };
 
@@ -41,7 +45,7 @@ export const updateUserFn = async (userId, userData, dataSource) => {
     }
   }
 
-  return dataSource.patch(userId, { ...userData });
+  return dataSource.patch(userId, { body: { ...userData } });
 };
 
 export const deleteUserFn = async (userId, dataSource) => {
@@ -53,7 +57,7 @@ export const deleteUserFn = async (userId, dataSource) => {
 const userExists = async (userName, dataSource) => {
   // /users/?userName=nomeBuscado
   const found = await dataSource.get('', {
-    userName,
+    params: { userName },
   });
   return found[0];
 };

@@ -1,4 +1,4 @@
-import { ValidationError } from 'apollo-server-errors';
+import { ValidationError } from '@apollo/datasource-rest';
 import { SQLDatasource } from '../../datasources/sql/sql-datasource';
 import { CREATED_COMMENT_TRIGGER, pubSub } from './resolvers';
 

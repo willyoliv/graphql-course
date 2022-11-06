@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-import { RESTDataSource } from 'apollo-datasource-rest';
+import { RESTDataSource } from '@apollo/datasource-rest';
 import { AuthenticationError } from 'apollo-server';
 
 export class LoginApi extends RESTDataSource {
@@ -10,7 +10,11 @@ export class LoginApi extends RESTDataSource {
   }
 
   async getUser(userName) {
-    const user = await this.get('', { userName }, { cacheOptions: { ttl: 0 } });
+    const user = await this.get(
+      '',
+      { params: { userName } },
+      { cacheOptions: { ttl: 0 } },
+    );
 
     const found = !!user.length;
 
@@ -20,7 +24,7 @@ export class LoginApi extends RESTDataSource {
     return user;
   }
 
-  async login(userName, password) {
+  async login(userName, password, res) {
     const user = await this.getUser(userName);
 
     const { passwordHash, id: userId } = user[0];
@@ -35,16 +39,8 @@ export class LoginApi extends RESTDataSource {
     }
 
     const token = this.createJwtToken({ userId });
-    await this.patch(userId, { token }, { cacheOptions: { ttl: 0 } });
+    await this.patch(userId, { body: { token } }, { cacheOptions: { ttl: 0 } });
 
-    // Response Header
-    this.context.res.cookie('jwtToken', token, {
-      secure: true, // Rede segura - Https
-      httpOnly: true, // Não deve ser acessado via código
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
-      path: '/',
-      sameSite: 'none', // strict lax none
-    });
 
     return {
       userId,
@@ -52,15 +48,19 @@ export class LoginApi extends RESTDataSource {
     };
   }
 
-  async logout(userName) {
+  async logout(userName, res, loggedUserId) {
     const user = await this.getUser(userName);
 
-    if (user[0].id !== this.context.loggedUserId) {
+    if (user[0].id !== loggedUserId) {
       throw new AuthenticationError('You are not this user.');
     }
 
-    await this.patch(user[0].id, { token: '' }, { cacheOptions: { ttl: 0 } });
-    this.context.res.clearCookie('jwtToken');
+    await this.patch(
+      user[0].id,
+      { body: { token: '' } },
+      { cacheOptions: { ttl: 0 } },
+    );
+    res.clearCookie('jwtToken');
     return true;
   }
 

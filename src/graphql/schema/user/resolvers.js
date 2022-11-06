@@ -12,7 +12,7 @@ const user = async (_, { id }, { dataSources }) => {
 };
 
 // Mutation Resolvers
-const createUser = async (_, { data }, { dataSources }) => {
+const createUser = async (_, { data }, {dataSources}) => {
   return dataSources.userApi.createUser(data);
 };
 

@@ -19,16 +19,16 @@ const posts = async (_, { input }, { dataSources, loggedUserId }) => {
 const createPost = async (_, { data }, { dataSources, loggedUserId }) => {
   checkIsLoggedIn(loggedUserId);
   data.userId = loggedUserId;
-  return dataSources.postApi.createPost(data);
+  return dataSources.postApi.createPost(data, dataSources.userApi);
 };
 
-const updatePost = async (_, { postId, data }, { dataSources }) => {
-  return dataSources.postApi.updatePost(postId, data);
+const updatePost = async (_, { postId, data }, { dataSources, loggedUserId }) => {
+  return dataSources.postApi.updatePost(postId, data, dataSources.userApi, loggedUserId);
 };
 
 const deletePost = async (_, { postId }, { dataSources, loggedUserId }) => {
   checkIsLoggedIn(loggedUserId);
-  return dataSources.postApi.deletePost(postId);
+  return dataSources.postApi.deletePost(postId, loggedUserId);
 };
 
 // Field resolver

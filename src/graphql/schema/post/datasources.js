@@ -1,4 +1,4 @@
-import { RESTDataSource } from 'apollo-datasource-rest';
+import { RESTDataSource } from '@apollo/datasource-rest';
 import { makePostDataLoader } from './dataloaders';
 import { createPostFn, updatePostFn, deletePostFn } from './utils/post-repository';
 
@@ -21,16 +21,16 @@ export class PostsApi extends RESTDataSource {
     });
   }
 
-  async createPost(postData) {
-    return createPostFn(postData, this);
+  async createPost(postData, userApi) {
+    return createPostFn(postData, this, userApi);
   }
 
-  async updatePost(postId, postData) {
-    return updatePostFn(postId, postData, this);
+  async updatePost(postId, postData, userApi, loggedUserId) {
+    return updatePostFn(postId, postData, this, userApi, loggedUserId);
   }
 
-  async deletePost(postId) {
-    return deletePostFn(postId, this);
+  async deletePost(postId, loggedUserId) {
+    return deletePostFn(postId, this, loggedUserId);
   }
 
   batchLoadByUserId(id) {

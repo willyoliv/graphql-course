@@ -41,7 +41,7 @@ export class CommentSQLDataSource extends SQLDatasource {
 
     const commentToReturn = {
       id: created[0],
-      createAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(),
       ...partialComment,
     };
 

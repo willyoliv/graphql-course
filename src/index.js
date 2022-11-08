@@ -24,12 +24,12 @@ const server = new ApolloServer({
   },
   uploads: false,
   cors: {
-    origin: ['https://studio.apollographql.com'],
+    origin: ['https://studio.apollographql.com', 'http://localhost:3000'],
     credentials: true,
   },
 });
 
-const port = process.env.PORT || 4003
+const port = process.env.PORT || 4003;
 
 server.listen(port).then(({ url }) => {
   console.log(`Server listening on url ${url}`);

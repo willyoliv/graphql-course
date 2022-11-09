@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { ValidationError, UserInputError } from 'apollo-server-errors';
+import { UserInputError, ValidationError } from 'apollo-server-errors';
 
 export const createUserFn = async (userData, dataSource) => {
   await checkUserFields(userData, true);

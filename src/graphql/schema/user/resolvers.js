@@ -22,7 +22,6 @@ const updateUser = async (
   { dataSources, loggedUserId },
 ) => {
   checkOwner(userId, loggedUserId);
-
   return dataSources.userApi.updateUser(userId, data);
 };
 
@@ -31,8 +30,8 @@ const deleteUser = async (_, { userId }, { dataSources, loggedUserId }) => {
   return dataSources.userApi.deleteUser(userId);
 };
 
-// Fields resolvers
-const posts = async ({ id }, _, { dataSources }) => {
+// Field Resolvers
+const posts = ({ id }, _, { dataSources }) => {
   return dataSources.postApi.batchLoadByUserId(id);
 };
 

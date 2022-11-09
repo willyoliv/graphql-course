@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError } from 'apollo-server-errors';
 
 export class LoginApi extends RESTDataSource {
   constructor() {
@@ -15,7 +15,7 @@ export class LoginApi extends RESTDataSource {
     const found = !!user.length;
 
     if (!found) {
-      throw new AuthenticationError('User does not exist.');
+      throw new AuthenticationError('Invalid user or password.');
     }
     return user;
   }
@@ -31,7 +31,7 @@ export class LoginApi extends RESTDataSource {
     );
 
     if (!isPasswordValid) {
-      throw new AuthenticationError('Invalid password.');
+      throw new AuthenticationError('Invalid user or password.');
     }
 
     const token = this.createJwtToken({ userId });

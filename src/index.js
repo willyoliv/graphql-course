@@ -24,7 +24,7 @@ const server = new ApolloServer({
   },
   uploads: false,
   cors: {
-    origin: ['https://studio.apollographql.com', 'http://localhost:3000'],
+    origin: ['https://studio.apollographql.com', 'https://enchanting-macaron-ac2774.netlify.app/'],
     credentials: true,
   },
 });

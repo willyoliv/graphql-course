@@ -26,7 +26,7 @@ const server = new ApolloServer({
   cors: {
     origin: [
       'https://studio.apollographql.com',
-      'posts-project-graphql.netlify.app',
+      'https://posts-project-graphql.netlify.app',
     ],
     credentials: true,
   },

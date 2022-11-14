@@ -5,8 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r sucrase/register src/index.js",
-    "server": "json-server --watch db.json"
+    "dev": "nodemon -e js -r dotenv/config -r sucrase/register src/index.js",
+    "server": "npx json-server --watch db.json --port 3004",
+    "build": "rimraf ./dist && sucrase ./src -d ./dist --transforms imports",
+    "start": "npm run server & node -r dotenv/config dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,18 @@
     "sucrase": "^3.28.0"
   },
   "dependencies": {
+    "@graphql-tools/schema": "^9.0.5",
+    "apollo-datasource": "^3.3.2",
+    "apollo-datasource-rest": "^3.7.0",
     "apollo-server": "^3.10.3",
-    "graphql": "^16.6.0"
+    "apollo-server-caching": "^3.3.0",
+    "bcrypt": "^5.1.0",
+    "dataloader": "^2.1.0",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "rimraf": "^3.0.2"
   }
 }
